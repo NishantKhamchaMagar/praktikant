@@ -1,0 +1,21 @@
+{
+  "name": "pta2",
+  "version": "1.0.0",
+  "description": "GIT on the server:\r 1. update and upgrade the system\r 2. install nodejs\r 3. install gogs and run on https://localhost:3000\r 4. create a local repo and connect to a remote repo\r 5. show;\r \tcommit history,\r \tsuitable readme file\r \tevidence of a pull request and merge\r \tevidence that some issues have been created, resolved and closed via a commit\r \ta repository has a simple TestCafe functional test included\r \ta .gitignore file (that prevents tracking the node_modules folder)\r \ta package.json file with TestCafe added as a development dependency",
+  "main": "TestCafe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NishantKhamchaMagar/praktikant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NishantKhamchaMagar/praktikant/issues"
+  },
+  "homepage": "https://github.com/NishantKhamchaMagar/praktikant#readme"
+}
