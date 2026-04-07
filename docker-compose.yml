@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: wp_container
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: kmant
+      WORDPRESS_DB_PASSWORD: 1234
+      WORDPRESS_DB_NAME: wp_database
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: wp_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass
+      MYSQL_DATABASE: wp_database
+      MYSQL_USER: kmant
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - ./db-data:/var/lib/mysql
